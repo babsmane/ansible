@@ -1,0 +1,10 @@
+---
+- name: Converge
+  hosts: instance
+  tasks:
+    - name: "Include ujr"
+      include_role:
+        name: "ujr"
+      vars:
+        - folder_name: "uuu"
+          any_text_value: "godzilla"  

@@ -1,0 +1,17 @@
+---
+# This is an example playbook to execute Ansible tests.
+
+- name: Verify
+  hosts: instance
+  gather_facts: yes
+
+  tasks:
+  - name: Check directory NOT exists
+    stat:
+      path: /etc/uuu_ansiblessss
+  - name: Check directory exists
+    stat:
+      path: /etc/uuu_ansible    
+  - name: Example assertion
+    assert:
+      that: true
